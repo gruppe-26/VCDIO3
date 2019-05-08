@@ -29,19 +29,19 @@ a:active {
 
 /* -------------------- Login page styling ---------------------------- */
 /* styling of <div> login form form */
-#login\ form form {
+#loginForm form {
     text-align: left;
 }
 
 /* styling of <div> login form fieldset */
-#login\ form fieldset {
+#loginForm fieldset {
     margin-left: 25%;
     margin-right: 25%;
     border-radius: 12px;
 }
 
 /* styling of <div> login form legend */
-#login\ form legend {
+#loginForm legend {
     text-align: center;
     font-size: 1.25em;
 }
