@@ -12,6 +12,7 @@ public class Logic {
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void CreateUser(){
-
     }
+
 }
+
