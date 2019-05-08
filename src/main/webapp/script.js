@@ -32,3 +32,25 @@ $("#loginButton").click(function () {
 $("#createUserButton").click(function () {
     $.post("URL");
 });
+
+/**
+ *  Show/hide metoder til menuerne
+ */
+
+$(".logoutPageShow").click(function () {
+    $("#adminPage").hide();
+    $("#editPage").hide();
+    $("#loginPage").show();
+});
+
+$(".adminPageShow").click(function () {
+    $("#loginPage").hide();
+    $("#editPage").hide();
+    $("#adminPage").show();
+});
+
+$(".editPageShow").click(function () {
+    $("#loginPage").hide();
+    $("#adminPage").hide();
+    $("#editPage").show();
+});
