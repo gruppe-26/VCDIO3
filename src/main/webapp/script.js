@@ -34,6 +34,13 @@ $("#createUserButton").click(function () {
         url : "Logic/???",
         data : $('#Create user form').serializeJSON(),
         contentType : "application/json",
+        method : 'POST',
+        success : function(data){
+            alert(data);
+        },
+        error : function(jqXHR, text, error){
+            alert(jqXHR.status + text + error);
+        }
     })
 });
 
