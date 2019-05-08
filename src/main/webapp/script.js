@@ -29,7 +29,7 @@ $("#loginButton").click(function () {
  * Metode til at sende data til serveren når der skal oprettes bruger.
  */
 
-$("#createUserButton").click(function () {
+$("#createUserForm").click(function () {
     $.ajax({
         url : 'rest/GetUserService',
         type: 'POST',
