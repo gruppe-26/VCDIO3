@@ -33,7 +33,7 @@ $("#createUserForm").click(function () {
     $.ajax({
         url : 'rest/GetUserService',
         type: 'POST',
-        data : $('div#createUserForm').serializeJSON(),
+        data : $('#createUserForm').serializeJSON(),
         contentType : 'application/json',
         method : 'POST',
         success : function(data){
