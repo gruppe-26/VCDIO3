@@ -1,17 +1,23 @@
 package Logic;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
+import DAL.DTO.UserDTO;
+
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+
 
 @Path("Logic")
 public class Logic {
 
     @Path("CreateUser")
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    public void CreateUser(){
+    @Produces(MediaType.APPLICATION_XML)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    public void CreateUser(@FormParam("username") String username, @FormParam("firstname") String firstname, @FormParam("initials") String initials,
+                           @FormParam("CPR") String CPR, @FormParam("password") String password, @FormParam("rolle") String rolle){
+
+        UserDTO userDTO = new UserDTO();
+
     }
 
 }
