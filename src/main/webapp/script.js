@@ -30,7 +30,7 @@ $("#loginButton").click(function () {
  */
 
 $("#createUserButton").click(function () {
-    $.post("URL");
+    $.get("URL");
 });
 
 /**
