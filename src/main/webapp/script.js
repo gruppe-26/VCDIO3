@@ -32,7 +32,7 @@ $("#loginButton").click(function () {
 $("#createUserButton").click(function () {
     $.ajax({
         url : "Logic/CreateUser",
-        data : $('#Create user form').serializeJSON(),
+        data : $('div#createUserForm').serializeJSON(),
         contentType : "application/json",
         method : 'POST',
         success : function(data){
