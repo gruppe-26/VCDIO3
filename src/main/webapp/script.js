@@ -54,3 +54,12 @@ $(".editPageShow").click(function () {
     $("#adminPage").hide();
     $("#editPage").show();
 });
+
+/**
+ *  Metode til at loade brugere og vise dem på brugeradministration-siden
+ */
+$(".adminPageShow").click(function(){
+    $.get("users", function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+    });
+});
