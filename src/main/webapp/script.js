@@ -29,9 +29,9 @@ $("#loginButton").click(function () {
  * Metode til at sende data til serveren når der skal oprettes bruger.
  */
 
-$("#createUserForm").click(function () {
+$("#createUserForm").onsubmit(function () {
     $.ajax({
-        url : 'rest/GetUserService',
+        url : '/rest/GetUserService',
         type: 'POST',
         data : $('#createUserForm').serializeJSON(),
         contentType : 'application/json',
