@@ -30,7 +30,11 @@ $("#loginButton").click(function () {
  */
 
 $("#createUserButton").click(function () {
-    $.post("URL");
+    $.ajax({
+        url : "Logic/???",
+        data : $('#Create user form').serializeJSON(),
+        contentType : "application/json",
+    })
 });
 
 /**
