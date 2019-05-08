@@ -13,10 +13,17 @@ public class UserDTO implements Serializable, IUserDTO {
     private String userName;
     private String ini;
     private String password;
-    private List<String> roles;
+    private String cpr;
+    private ArrayList roles;
     //Constructor
-    public UserDTO() {
-        this.roles = new ArrayList<>();
+
+    public UserDTO(int userId, String userName, String ini, String password,String cpr, ArrayList roles) {
+        this.userId = userId;
+        this.userName = userName;
+        this.ini = ini;
+        this.password = password;
+        this.cpr = cpr;
+        this.roles = roles;
     }
     //Getters and Setters
     @Override
@@ -56,11 +63,11 @@ public class UserDTO implements Serializable, IUserDTO {
 
 
     @Override
-    public List<String> getRoles() {
+    public ArrayList getRoles() {
         return roles;
     }
     @Override
-    public void setRoles(List<String> roles) {
+    public void setRoles(ArrayList roles) {
         this.roles = roles;
     }
 

@@ -1,5 +1,6 @@
 package DAL.DTO;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface IUserDTO {
@@ -19,9 +20,9 @@ public interface IUserDTO {
 
     void setPassword(String password);
 
-    List<String> getRoles();
+    ArrayList getRoles();
 
-    void setRoles(List<String> roles);
+    void setRoles(ArrayList roles);
 
     void addRole(String role);
 
