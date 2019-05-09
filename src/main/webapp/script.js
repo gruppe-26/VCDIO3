@@ -50,10 +50,6 @@ $("#createUserButton").click(function () {
  * Metode til at sende brugeren tilbage til menuen efter man har
  * oprettet en bruger
  */
-$("#createUserForm").click(function(){
-    $("#adminPage").show();
-    $("#editPage").hide();
-});
 
 
 
