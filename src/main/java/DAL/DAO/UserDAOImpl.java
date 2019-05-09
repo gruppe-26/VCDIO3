@@ -31,7 +31,7 @@ public class UserDAOImpl implements IUserDAO {
 
             for (int i = 0; i < user.getRoles().size(); i++){
                 statementRoles.setInt(1, user.getUserId());
-                statementRoles.setString(2, user.getRoles().get(i));
+                statementRoles.setString(2, user.getRoles().get(i).toString());
                 statementRoles.execute();
             }
 
@@ -60,7 +60,7 @@ public class UserDAOImpl implements IUserDAO {
             PreparedStatement statementRoles = connection.prepareStatement("SELECT * FROM rolesdb WHERE ID = ?;");
             statementRoles.setInt(1, userId);
             ResultSet resultSetRoles = statementRoles.executeQuery();
-            List<String> roles = new ArrayList<>();
+            ArrayList<String> roles = new ArrayList<>();
 
             while(resultSetRoles.next()) {
                 roles.add(resultSetRoles.getString("role"));
@@ -82,7 +82,7 @@ public class UserDAOImpl implements IUserDAO {
 
         try(Connection connection = createConnection()){
             List<IUserDTO> userlist = new ArrayList<>();
-            List<String> roles = new ArrayList<>();
+            ArrayList<String> roles = new ArrayList<>();
             IUserDTO user = new UserDTO();
 
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM usersdb;");
@@ -134,7 +134,7 @@ public class UserDAOImpl implements IUserDAO {
 
             for (int i = 0; i < user.getRoles().size(); i++){
                 statementRoles.setInt(1, user.getUserId());
-                statementRoles.setString(2, user.getRoles().get(i));
+                statementRoles.setString(2, user.getRoles().get(i).toString());
                 statementRoles.execute();
             }
 

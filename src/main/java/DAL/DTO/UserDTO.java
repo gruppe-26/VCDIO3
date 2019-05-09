@@ -17,14 +17,15 @@ public class UserDTO implements Serializable, IUserDTO {
     private ArrayList roles;
     //Constructor
 
-    public UserDTO(int userId, String userName, String ini, String password,String cpr, ArrayList roles) {
-        this.userId = userId;
-        this.userName = userName;
-        this.ini = ini;
-        this.password = password;
-        this.cpr = cpr;
-        this.roles = roles;
-    }
+//    public UserDTO(int userId, String userName, String ini, String password, String cpr, ArrayList roles) {
+//        this.userId = userId;
+//        this.userName = userName;
+//        this.ini = ini;
+//        this.password = password;
+//        this.cpr = cpr;
+//        this.roles = roles;
+//    }
+
     //Getters and Setters
     @Override
     public int getUserId() {
