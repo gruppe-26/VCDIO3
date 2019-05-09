@@ -10,10 +10,11 @@ import java.util.List;
 public class UserDTO implements Serializable, IUserDTO {
     //Fields
     private int	userId;
+    private String name;
     private String userName;
     private String ini;
-    private String password;
     private String cpr;
+    private String password;
     private ArrayList roles;
     //Constructor
 
@@ -36,6 +37,10 @@ public class UserDTO implements Serializable, IUserDTO {
         this.userId = userId;
     }
     @Override
+    public String getName() { return name;}
+    @Override
+    public void setName(String name) { this.name = name; }
+    @Override
     public String getUserName() {
         return userName;
     }
@@ -51,18 +56,22 @@ public class UserDTO implements Serializable, IUserDTO {
     public void setIni(String ini) {
         this.ini = ini;
     }
+    @Override
+    public String getCpr(){return cpr;}
 
+    @Override
+    public void setCpr(String cpr) { this.cpr=cpr; }
+
+    @Override
+    public void setCpr(){ this.cpr = cpr;}
     @Override
     public String getPassword() {
         return password;
     }
-
     @Override
     public void setPassword(String password) {
         this.password = password;
     }
-
-
     @Override
     public ArrayList getRoles() {
         return roles;

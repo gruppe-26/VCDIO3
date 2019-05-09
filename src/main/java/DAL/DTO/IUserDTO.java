@@ -8,6 +8,10 @@ public interface IUserDTO {
 
     void setUserId(int userId);
 
+    String getName();
+
+    void setName(String name);
+
     String getUserName();
 
     void setUserName(String userName);
@@ -15,6 +19,12 @@ public interface IUserDTO {
     String getIni();
 
     void setIni(String ini);
+
+    String getCpr();
+
+    void setCpr(String cpr);
+
+    void setCpr();
 
     String getPassword();
 

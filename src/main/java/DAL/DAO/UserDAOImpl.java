@@ -25,10 +25,13 @@ public class UserDAOImpl implements IUserDAO {
 
         try(Connection connection = createConnection()){
 
-            PreparedStatement statement = connection.prepareStatement("INSERT INTO usersdb VALUES (?,?,?);");
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO usersdb VALUES (?,?,?,?,?,?);");
             statement.setInt(1, user.getUserId());
             statement.setString(2, user.getUserName());
             statement.setString(3, user.getIni());
+            statement.setString(4,user.getName());
+            statement.setString(5,user.getCpr());
+            statement.setString(6,user.getPassword());
             statement.execute();
 
             PreparedStatement statementRoles = connection.prepareStatement("INSERT INTO rolesdb VALUES (?,?);");
