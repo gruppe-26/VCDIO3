@@ -10,9 +10,13 @@ import java.util.List;
 public class UserDAOImpl implements IUserDAO {
 
     private Connection createConnection() throws SQLException {
+        // Tobias DB
+        // return  DriverManager.getConnection("jdbc:mysql://ec2-52-30-211-3.eu-west-1.compute.amazonaws.com/s185143?"
+        //       + "user=s185143&password=hYfJLbbto4EHaStuKJn1m");
 
-        return  DriverManager.getConnection("jdbc:mysql://ec2-52-30-211-3.eu-west-1.compute.amazonaws.com/s185143?"
-                + "user=s185143&password=hYfJLbbto4EHaStuKJn1m");
+        // Marks DB
+        return  DriverManager.getConnection("jdbc:mysql://ec2-52-30-211-3.eu-west-1.compute.amazonaws.com/s153679?"
+                       + "user=s153679&password=2IYMod6yoCtICi61cdPFR");
 
     }
 
