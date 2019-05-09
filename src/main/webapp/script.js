@@ -16,7 +16,6 @@ $("#createUser").click(function(){
     $("#adminPage").hide();
     $("#editPage").show();
 });
-
 /**
  * Metode til at hente data fra serveren.
  */
@@ -42,7 +41,20 @@ $("#createUserButton").click(function () {
             alert(jqXHR.status + text + error);
         }
     })
+
+    $("#adminPage").show();
+    $("#editPage").hide();
+
 });
+/**
+ * Metode til at sende brugeren tilbage til menuen efter man har
+ * oprettet en bruger
+ */
+$("#createUserForm").click(function(){
+    $("#adminPage").show();
+    $("#editPage").hide();
+});
+
 
 /**
  *  Show/hide metoder til menuerne
