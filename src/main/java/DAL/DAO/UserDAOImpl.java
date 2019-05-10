@@ -33,14 +33,15 @@ public class UserDAOImpl implements IUserDAO {
             statement.setString(5,user.getCpr());
             statement.setString(6,user.getPassword());
             statement.execute();
-
+            /*
             PreparedStatement statementRoles = connection.prepareStatement("INSERT INTO rolesdb VALUES (?,?);");
-
             for (int i = 0; i < user.getRoles().size(); i++){
                 statementRoles.setInt(1, user.getUserId());
-                statementRoles.setString(2, user.getRoles().get(i).toString());
+                // statementRoles.setString(2, user.getRoles().get(i).toString());
                 statementRoles.execute();
             }
+             */
+
 
         } catch (SQLException e) {
             throw new DALException(e.getMessage());

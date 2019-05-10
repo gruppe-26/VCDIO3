@@ -3,14 +3,20 @@ package Logic;
 import DAL.DAO.IUserDAO;
 import DAL.DAO.UserDAOImpl;
 import DAL.DTO.UserDTO;
+import org.glassfish.jersey.server.ResourceConfig;
 
 import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Application;
+import java.util.*;
 
 
 @Path("/user")
 public class Logic {
+
+    @GET
+    public UserDTO newUser(){
+        return newUser();
+    }
 
     @POST
     @Path("/add")
@@ -36,6 +42,31 @@ public class Logic {
         init.createUser(userDTO);
 
     }
+    // Method that tests the database to show that backend works.
+    public static void main(String[] args) throws IUserDAO.DALException {
+        UserDTO userDTO = new UserDTO();
+        userDTO.setUserId(1);
+        userDTO.setUserName("mcmalloy");
+        userDTO.setIni("mcm");
+        userDTO.setName("Mark");
+        userDTO.setCpr("150996");
+        userDTO.setPassword("acjyanqx5");
+
+        /*
+        ArrayList<String> roles = new ArrayList();
+        roles.add("Admin");
+        userDTO.addRole(roles.get(0));
+         */
+
+
+        UserDAOImpl init = new UserDAOImpl();
+
+        init.createUser(userDTO);
+    }
+
+}
+@ApplicationPath("/rest")
+class AppConfig extends Application {
 
 }
 
