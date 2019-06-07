@@ -13,10 +13,10 @@ function getPersonInfo(){
             }
         }
     }
-    ajaxRequest.open('GET', 'http://localhost:8080/people/' + name);
+    ajaxRequest.open('GET', 'http://localhost:8080/rest/user/VCDIO3_war_exploded/MainPage.html' + name);
     ajaxRequest.send();
 }
-
+// CmdHttpRequest -u http://www.google.com
 function setPersonInfo(){
     var username = document.getElementById('newUsername').value;
     var firstname = document.getElementById('newFirstname').value;
@@ -31,7 +31,7 @@ function setPersonInfo(){
     postData += '&password' + password;
 
     var ajaxRequest = new XMLHttpRequest();
-    ajaxRequest.open('POST', 'http://localhost:8080/people/' + name);
+    ajaxRequest.open('POST', 'http://localhost:8080/rest/user/' + name);
     ajaxRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     ajaxRequest.send(postData);
 }

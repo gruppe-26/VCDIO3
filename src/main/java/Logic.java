@@ -1,5 +1,3 @@
-package Logic;
-
 import DAL.DAO.IUserDAO;
 import DAL.DAO.UserDAOImpl;
 import DAL.DTO.UserDTO;
@@ -18,8 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 public class Logic {
 
     @GET
-    public UserDTO newUser(){
-        return newUser();
+    public String newUser(){
+        // return newUser();
+        return "Hej";
     }
 
     @POST
@@ -67,10 +66,6 @@ public class Logic {
 
         init.createUser(userDTO);
     }
-
-}
-@ApplicationPath("/rest")
-class AppConfig extends Application {
 
 }
 
