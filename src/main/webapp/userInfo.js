@@ -1,15 +1,15 @@
 function getPersonInfo(){
-    var name = document.getElementById('username').value;
+    var name = document.getElementById('newUsername').value;
 
     var ajaxRequest = new XMLHttpRequest();
     ajaxRequest.onreadystatechange = function(){
         if(ajaxRequest.readyState == 4){
             if(ajaxRequest.status == 200){
                 var person = JSON.parse(ajaxRequest.responseText);
-                document.getElementById('firstName').value = person.firstname;
-                document.getElementById('ini').value = person.initials;
-                document.getElementById('cpr').value = person.CPR;
-                document.getElementById('password').value = person.password;
+                document.getElementById('newFirstname').value = person.firstname;
+                document.getElementById('newInitials').value = person.initials;
+                document.getElementById('newCPR').value = person.CPR;
+                document.getElementById('newPassword').value = person.password;
             }
         }
     }
@@ -18,11 +18,11 @@ function getPersonInfo(){
 }
 
 function setPersonInfo(){
-    var username = document.getElementById('username').value;
-    var firstname = document.getElementById('firstname').value;
-    var ini = document.getElementById('ini').value;
-    var cpr = document.getElementById('cpr').value;
-    var password = document.getElementById('password').value;
+    var username = document.getElementById('newUsername').value;
+    var firstname = document.getElementById('newFirstname').value;
+    var ini = document.getElementById('newInitials').value;
+    var cpr = document.getElementById('newCPR').value;
+    var password = document.getElementById('newPassword').value;
 
     var postData = 'username=' + username;
     postData += '&firstname='+firstname;
