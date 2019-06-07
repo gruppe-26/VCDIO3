@@ -8,6 +8,10 @@ import org.glassfish.jersey.server.ResourceConfig;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Application;
 import java.util.*;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 
 @Path("/user")

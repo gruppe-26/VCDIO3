@@ -37,4 +37,6 @@ public interface IUserDTO {
     void addRole(String role);
 
     boolean removeRole(String role);
+
+
 }
